@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: jekyll-theme-minimal
 title: "Completed Academic Courses"
 permalink: /courses/
 ---
