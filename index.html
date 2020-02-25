@@ -33,32 +33,28 @@
 
 <!-- Navbar -->
 <div class="w3-top ">
-  <div class="w3-bar w3-black w3-card">
-    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-    <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">BAND</a>
-    <a href="#courses" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Courses</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
-    <div class="w3-dropdown-hover w3-hide-small">
-      <button class="w3-padding-large w3-button" title="More">My Pages<i class="fa fa-caret-down"></i></button>     
-      <div class="w3-dropdown-content w3-bar-block w3-card-4">
-		<a href="https://www.linkedin.com/in/adnaz/" class="w3-bar-item w3-button">LinkedIn Profile</a>
-  <a href="https://github.com/anazareth" class="w3-bar-item w3-button">GitHub Respositories</a>
-  <a href="https://public.tableau.com/profile/alex.nazareth#!/" class="w3-bar-item w3-button">Tableau Public</a>
-      </div>
-    </div>
-    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
-  </div>
+	<div class="w3-bar w3-black w3-card">
+		<a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="toggleHamburger()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+		<a href="#" class="w3-bar-item w3-button w3-padding-large">Home</a>
+		<a href="#courses" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Courses</a>
+		<div class="w3-dropdown-hover w3-hide-small">
+			<button class="w3-padding-large w3-button" title="More">My Pages<i class="fa fa-caret-down"></i></button>     
+			<div class="w3-dropdown-content w3-bar-block w3-card-4">
+				<a href="https://www.linkedin.com/in/adnaz/" class="w3-bar-item w3-button">LinkedIn Profile</a>
+				<a href="https://github.com/anazareth" class="w3-bar-item w3-button">GitHub Respositories</a>
+				<a href="https://public.tableau.com/profile/alex.nazareth#!/" class="w3-bar-item w3-button">Tableau Public</a>
+			</div>
+		</div>
+		<a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+	</div>
 </div>
 
 <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
 <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-  <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">BAND</a>
-  <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">TOUR</a>
-  <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
-  <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a>
+	<a href="https://www.linkedin.com/in/adnaz/" class="w3-bar-item w3-button">LinkedIn Profile</a>
+	<a href="https://github.com/anazareth" class="w3-bar-item w3-button">GitHub Respositories</a>
+	<a href="https://public.tableau.com/profile/alex.nazareth#!/" class="w3-bar-item w3-button">Tableau Public</a>
 </div>
-
 
 <!-- Modal -->
 <div id="id01" class="w3-modal">
@@ -86,6 +82,12 @@
 		</div>
       </footer>
     </div>
+</div>
+
+<!--Profile Image-->
+<h2 class="w3-center"></h2>
+<div class="w3-content" style="max-width:800px;position:relative">
+	<img class="mySlides w3-animate-opacity" src=".\pics\AlexNazareth_Graphs.jpg" style="width:100%">
 </div>
 
 <!-- Cards -->
@@ -123,12 +125,6 @@
   <p>Sports Analytics Co-op (Canadian Tire Bank, 2017)</p>
   </div>
 </div>
-</div>
-
-<!-- Image-->
-<h2 class="w3-center"></h2>
-<div class="w3-content" style="max-width:800px;position:relative">
-	<img class="mySlides w3-animate-opacity" src=".\pics\AlexNazareth_Graphs.jpg" style="width:100%">
 </div>
 
 <!-- Course Table -->
@@ -284,6 +280,16 @@ function move() {
       elem.style.width = width + '%'; 
       elem.innerHTML = width * 1  + '%';
     }
+  }
+}
+
+
+function toggleHamburger() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
   }
 }
 </script>
